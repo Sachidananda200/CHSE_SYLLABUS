@@ -19,8 +19,6 @@
         padding: 20px;
         max-width: 500px;
         margin: 20px auto;
-        height: auto;
-        margin-bottom: 40px;
     }
     h1 {
         color: #333;
@@ -39,15 +37,6 @@
     #result {
         font-weight: bold;
         margin-top: 10px;
-    }
-    #button-1{
-        display: none;
-    }
-    #button-1 a{
-        text-decoration: none;
-        color: black;
-        width: 10%;
-        
     }
 </style>
 </head>
@@ -76,8 +65,7 @@
                     <input type="radio" name="q2" value="c"> (ଗ) ହୋଲୋଜୋଜିକ୍ ପୁଷ୍ଟିକର |<br>
                     <input type="radio" name="q2" value="d"> (ଘ) ଅଟୋଟ୍ରୋଫିକ୍ ପୁଷ୍ଟିକର |<br>
                 </label>
-            
-            </div>
+            </div3
         </div>
         <div class="question" id="question3">
             <p>3. କବକରୁ ମିଳୁଥିବା ପୁଷ୍ଟିକର ପଦ୍ଧତି ହେଉଛି:
@@ -168,76 +156,46 @@
             <p>10. ଯେତେବେଳେ ଚାଉଳ ପାଣିରେ କିଛି ବୁନ୍ଦା ଆୟୋଡିନ୍ ଦ୍ରବଣ ମିଶାଯାଏ, ସମାଧାନ ନୀଳ-କଳା ରଙ୍ଗରେ ପରିଣତ ହୁଏ | ଏହା ସୂଚିତ କରେ ଯେ ଚାଉଳ ପାଣି ଧାରଣ କରିଥାଏ:</p>
             <div class="options">
                 <label class="option">
-                    <input type="radio" name="q10" value="କ"> (କ) ଚର୍ବି<br>
-                    <input type="radio" name="q10" value="ଖ"> (ଖ) ଜଟିଳ ପ୍ରୋଟିନ୍<br>
-                    <input type="radio" name="q10" value="ଗ"> (ଗ) ଷ୍ଟାର୍<br>
-                    <input type="radio" name="q10" value="ଘ"> (ଘ) ସରଳ ପ୍ରୋଟିନ୍<br>
-                
+                    <input type="radio" name="q10" value="a"> (କ) ଚର୍ବି<br>
+                    <input type="radio" name="q10" value="b"> (ଖ) ଜଟିଳ ପ୍ରୋଟିନ୍<br>
+                    <input type="radio" name="q10" value="c"> (ଗ) ଷ୍ଟାର୍<br>
+                    <input type="radio" name="q10" value="d"> (ଘ) ସରଳ ପ୍ରୋଟିନ୍<br>
+                </form>
                 
                 </label>
             </div>
         </div>
         <button onclick="calculateScore()">Submit</button>
         <div id="result"></div>
-        <button id="button-1"><a href="https://www.youtube.com/watch?v=KlC1swChX3Y">Learn Topics</a></button>
-        <p id="score-line"></p>
-
     </div>
 
     <script>
-
         function calculateScore() {
             const answers = {
-                q1: "ଗ",
-                q2: "ଖ",
-                q3: "ଖ",
-                q4: "ଖ",
-                q5: "କ",
-                q6: "ଘ",
-                q7: "ଗ",
-                q8: "ଘ",
-                q9: "ଗ",
-                q10: "କ"
+                q1: "c",
+                q2: "b",
+                q3: "b",
+                q4: "b",
+                q5: "a",
+                q6: "d",
+                q7: "c",
+                q8: "d",
+                q9: "c",
+                q10: "a"
                 // Add more questions and answers here
             };
 
             let score = 0;
-           
-            
+
             for (const questionId in answers) {
                 const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
-                console.log(selectedOption);
                 if (selectedOption) {
                     if (selectedOption.value === answers[questionId]) {
                         score++;
                     }
-                    else{
-                        let parent=selectedOption.parentElement
-                        let grandparent=parent.parentElement
-                        let message=document.createElement("p")
-                        message.textContent="ଭୁଲ ଉତ୍ତର"
-                        message.style.color="red"
-                        grandparent.appendChild(message)
-                        let ans=`ଠିକ ଉତ୍ତର ହେଉଛି ${answers[questionId]}`
-                        
-                        let answer=document.createElement("p")
-                        answer.innerHTML=ans
-                        answer.style.color="blue"
-                        grandparent.appendChild(answer)
-                        
-                    }
-                    if (score < 7) {
-                       document.getElementById("score-line").innerHTML="Please revise the topic"
-                       document.getElementById("button-1").style.display="block"
-                        // Replace with your YouTube link
-                    } else {
-                        document.getElementById("score-line").innerHTML="Your Score was Good"
-
-                    }
-        
                 }
             }
-           
+
             const resultElement = document.getElementById("result");
             resultElement.textContent = `Your Score: ${score}`;
         }
