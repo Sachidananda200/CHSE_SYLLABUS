@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f5e9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card-three{
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            grid-column: span 3; /* Span all 3 columns */
+        }
+
+        /* Styling for Previous Mark card */
+        #previous-mark {
+            color: #009688; /* Green */
+        }
+
+        /* Styling for Current Mark card */
+        #current-mark {
+            color: #f44336; /* Red */
+        }
+
+        /* Styling for Percentage Growth card */
+        #percentage-growth {
+            color: #2196F3; /* Blue */
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          .title {
+            text-decoration: none;
+          }
+          
+          .title h1 {
+            color: rgb(6, 6, 71);
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 35px;
+          }
+          .logo img {
+            width: 100px;
+            margin-left: 40px;
+          }
+          
+          .nav {
+            width: 100%;
+          
+            box-sizing: border-box;
+            padding: 10px;
+            height: 15%;
+            background: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .menu {
+            margin-right: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+          .menu-items {
+            display: flex;
+            list-style: none;
+            margin-left: 20px;
+          }
+          .links {
+            text-decoration: none;
+            color: rgb(23, 3, 94);
+            margin-left: 20px;
+            font-size: 22px;
+            font-family: sans-serif;
+            font-weight: 600;
+          }
+          .links:hover {
+            color: rgb(134, 34, 228);
+            transition: 0.2s;
+          }
+          
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html"><img src="Media/Department-of-School-and-Mass-Education.png" alt=""></a>
+            <a href="index.html" class="title"><h1>Department of School  <br> and Mass Education</h1></a>
+        </div>
+        <div class="menu">
+            <ul class="menu-items">
+                <li><a href="index.html" class="links">Home</a></li>
+                <li><a href="course.html" class="links">Syllabus</a></li>
+                <li><a href="Scholarship.html" class="links">Scholarship</a></li>
+                <li><a href="Quiz In.html" class="links">Quiz</a></li>
+                <li><a href="Dashboard.html" class="links">Progress</a></li>
+                <li><a href="contact-us.html" class="links">contact-us</a></li>
+            </ul>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <div class="card">
+            <h2>Enter Your Name</h2>
+            
+        </div>
+        <div class="card">
+            <h2>Previous Mark</h2>
+            <p id="previous-mark"></p>
+        </div>
+        <div class="card">
+            <h2>Current Mark</h2>
+            <p id="current-mark"></p>
+        </div>
+        <div class="card-three">
+            <h2>Percentage Growth</h2>
+            <p id="percentage-growth">5%</p>
+            <div id="action-buttons" style="display: none;">
+                <button id="retest-button">Re-Test</button>
+                <button id="learnmore-button">Learn More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="low-score-card" style="display: none;">
+    <h2>Your Score is Very Low!</h2>
+    <p style="color: red;">Consider additional study or seeking help.</p>
+</div>
+</div>
+
+<script>
+// Assuming you have retrieved the previous and current marks from different sources
+const previousMark = 50; // Replace with the actual previous mark
+const currentMark = 100;  // Replace with the actual current mark
+
+// Calculate percentage growth
+const percentageGrowth = ((currentMark - previousMark) / previousMark) * 100;
+
+// Update the dashboard with the calculated values
+document.getElementById('previous-mark').textContent = previousMark;
+document.getElementById('current-mark').textContent = currentMark;
+document.getElementById('percentage-growth').textContent = `${percentageGrowth.toFixed(2)}%`;
+
+// Check if growth is less than 50% and show action buttons and message card accordingly
+if (percentageGrowth < 50) {
+    document.getElementById('action-buttons').style.display = 'block';
+    document.getElementById('low-score-card').style.display = 'block';
+
+    // Add click event handlers for the buttons
+    document.getElementById('retest-button').addEventListener('click', () => {
+        alert('Re-Test Clicked');
+        // Implement re-test logic here
+    });
+
+    document.getElementById('learnmore-button').addEventListener('click', () => {
+        alert('Learn More Clicked');
+        // Implement learn more logic here
+    });
+}
+</script>
+</body>
+</html>

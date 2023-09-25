@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Background color for the entire page */
+        body {
+            background-color: #1A73E8; /* Light gray */
+            background-image: url(Media/bnr1_bg.png);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the scholarship cards */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .container h1{
+            text-align: center;
+            color: white;
+        }
+
+        /* Scholarship card styles */
+        .card {
+            background-color: #ECF0FF; /* White */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(179, 168, 168, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Scholarship card title */
+        .card h2 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #333; /* Dark gray */
+            text-decoration: underline;
+            text-underline-offset: 15px;
+        }
+
+        /* Scholarship card description */
+        .card p {
+            color: #3a3535; /* Gray */
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            line-height: 20px;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+
+        /* Scholarship card CTA button */
+        .card button {
+            background-color: #2196F3; /* Blue */
+            color: #fff; /* White */
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          .title {
+            text-decoration: none;
+          }
+          
+          .title h1 {
+            color: rgb(6, 6, 71);
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 35px;
+          }
+          .logo img {
+            width: 100px;
+            margin-left: 40px;
+          }
+          
+          .nav {
+            width: 100%;
+          
+            box-sizing: border-box;
+            padding: 10px;
+            height: 15%;
+            background: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .menu {
+            margin-right: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+          .menu-items {
+            display: flex;
+            list-style: none;
+            margin-left: 20px;
+          }
+          .links {
+            text-decoration: none;
+            color: rgb(23, 3, 94);
+            margin-left: 20px;
+            font-size: 22px;
+            font-family: sans-serif;
+            font-weight: 600;
+          }
+          .links:hover {
+            color: rgb(134, 34, 228);
+            transition: 0.2s;
+          }
+          
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html"><img src="Media/Department-of-School-and-Mass-Education.png" alt=""></a>
+            <a href="index.html" class="title"><h1>Department of School  <br> and Mass Education</h1></a>
+        </div>
+        <div class="menu">
+            <ul class="menu-items">
+                <li><a href="index.html" class="links">Home</a></li>
+                <li><a href="course.html" class="links">Syllabus</a></li>
+                <li><a href="Scholarship.html" class="links">Scholarship</a></li>
+                <li><a href="Quiz In.html" class="links">Quiz</a></li>
+                <li><a href="Dashboard.html" class="links">Progress</a></li>
+                <li><a href="contact-us.html" class="links">contact-us</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="container">
+        <h1>Scholarship Portal</h1>
+        <!-- Scholarship Card 1 -->
+        <div class="card">
+            <h2>ପ୍ରେରଣା</h2>
+            <p>Odisha State Scholarship Portal envisioned to bridge the gap between the scholarship providers and scholarship seekers thus, encouraging more students</p>
+            <button onclick=" window.location.href='https://scholarship.odisha.gov.in/'">Apply Now</button>
+        </div>
+
+        <!-- Scholarship Card 2 -->
+        <div class="card">
+            <h2>ପଠାଣି ସାମନ୍ତ ମେଧାବୃତ୍ତି</h2>
+            <p>The prime or main objective of starting the Pathani Samant Mathematics Scholarship Test is to provide scholarships to the students of classes 6th to 12th, who have a great interest in Mathematics subject and secure good marks or rank after participating in PMST</p>
+            <button onclick=" window.location.href='https://scholarship.odisha.gov.in/'">Apply Now</button>
+        </div>
+
+        <!-- Scholarship Card 3 -->
+        <div class="card">
+            <h2>ମେଧାବୃତ୍ତି</h2>
+            <p>Up to 100 scholarships are awarded for Intermediate and Graduate education and up to 30 scholarships for Diploma education. Medha Charitable Trust was founded in 2006 to improve quality of education in India. The aim of the trust is to uplift the people of India.</p>
+            <button onclick=" window.location.href='https://scholarship.odisha.gov.in/'">Apply Now</button>
+        </div>
+    </div>
+</body>
+</html>
