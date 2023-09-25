@@ -1,0 +1,120 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure the body stretches to at least the height of the viewport */
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    /* Grow to fill remaining vertical space */
+    justify-content: space-between;
+    margin: 20px;
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.game {
+    border: 2px solid #27ae60;
+}
+
+.animation {
+    border: 2px solid #e74c3c;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Add this to your existing CSS file */
+.picture-section {
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: 33.33%; /* Set the width to divide the container into 3 equal parts */
+    box-sizing: border-box; /* Ensure padding and border don't affect the width */
+}
+
+.picture-section h3 {
+    margin: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture-section img {
+    max-width: 100px; /* Set the maximum width for small images */
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 1s;
+     /* Add spacing between images and descriptions */
+}
+
+.picture-section:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+/* Add this CSS to your existing stylesheet or create a new one */
+
+/* Add this CSS to your existing stylesheet or create a new one */
+
+.animation {
+    flex: 1;
+}
+
+.learn-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.learn-button:hover {
+    background-color: #2980b9;
+}
+
+.learn-button:active {
+    transform: scale(0.95);
+}
+.animation-container a{
+    text-decoration: none;
+    color: white;
+}

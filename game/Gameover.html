@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: red;
+        }
+        #play-again-button {
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #play-again-button:hover {
+            background-color: #005B87;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Over!</h1>
+    <button id="play-again-button">Play Again</button>
+
+    <script>
+        // JavaScript code to handle the "Play Again" button click event
+        document.getElementById("play-again-button").addEventListener("click", function () {
+            // You can add your game restart logic here
+            window.location.replace("hangman.html")
+        });
+    </script>
+</body>
+</html>
